@@ -6,8 +6,8 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).on("tap",function() {
-  if (!started) {
+$(document).on("click",function() {
+    if (!started) {
     $("#level-title").text("level " + level);
     nextSequence();
     started = true;
@@ -51,7 +51,7 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $("#level-title").text("Game-Over, Touch to Restart");
+    $("#level-title").text("Game-Over, click to Restart");
     startOver();
   }
 
